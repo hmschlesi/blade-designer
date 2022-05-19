@@ -1,0 +1,17 @@
+naca 2612
+
+
+oper
+re 0
+mach 0.3
+pacc
+
+
+alfa 6
+dump xfoil_a06.000_dump.dat
+cpwr xfoil_a06.000_cpwr.dat
+pwrt
+xfoil_pwrt.dat
+plis
+
+quit
