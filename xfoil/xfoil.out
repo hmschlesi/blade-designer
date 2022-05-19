@@ -46,8 +46,8 @@
    Z       Zoom    | (available in all menus)
    U       Unzoom  | 
 
- XFOIL   c>   Max thickness =     0.120035  at x =   0.300
- Max camber    =     0.020000  at x =   0.598
+ XFOIL   c>   Max thickness =     0.120029  at x =   0.297
+ Max camber    =     0.004771  at x =   0.504
 
  Buffer airfoil set using 331 points
 
@@ -71,7 +71,7 @@
 
 .OPERi   c>  
  Polar  1 newly created for accumulation
- Airfoil archived with polar: NACA 2612                                       
+ Airfoil archived with polar: NACA 2012                                       
 
 Enter  polar save filename  OR  <return> for no file   s>  
  Polar save file will NOT be written
@@ -82,7 +82,7 @@ Enter  polar dump filename  OR  <return> for no file   s>
  Polar accumulation enabled
 
 .OPERia   c>   Calculating unit vorticity distributions ...
- plradd ia,ip,cpol            1           0  4.97869868E-03
+ plradd ia,ip,cpol            1           0  4.17501573E-03
 
  Point added to stored polar  1
  Save file unspecified or not available
@@ -93,7 +93,7 @@ Enter  polar dump filename  OR  <return> for no file   s>
 .OPERia   c>  
         airfoil                    Re           Mach       Ncrit  XtripT  XtripB     file
        ------------------------  ------------  ----------  -----  ------  ------    -------------------
- >  1  NACA 2612                 0.000e*       0.300        9.00   1.000   1.000    
+ >  1  NACA 2012                 0.000e*       0.300        9.00   1.000   1.000    
 
 Enter polar output filename   s>  
 .OPERia   c>  
@@ -102,7 +102,7 @@ Enter polar output filename   s>
   
        XFOIL         Version 6.99
   
- Calculated polar for: NACA 2612                                       
+ Calculated polar for: NACA 2012                                       
   
  1 1 Reynolds number fixed          Mach number fixed         
   
@@ -111,7 +111,7 @@ Enter polar output filename   s>
   
    alpha    CL        CD       CDp       CM     Top_Xtr  Bot_Xtr
   ------ -------- --------- --------- -------- -------- --------
-   6.000   1.1097   0.00000  -0.00696  -0.0903   0.0000   0.0000
+   6.000   1.0003   0.00000  -0.00901  -0.0264   0.0000   0.0000
 
 .OPERia   c>  
  XFOIL   c>  

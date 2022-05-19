@@ -1,0 +1,10 @@
+function bladesafe(profile)
+l=length(profiles)
+
+for i=1:w
+   filename = strcat('file', num2str(i),'.dat');
+   csvwrite(filename,profile(:,i*3-2:i*3));
+ end
+
+    
+%%csvwrite('./blade/test.dat',profile);

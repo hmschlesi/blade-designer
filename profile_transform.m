@@ -1,5 +1,5 @@
 
-function profile=profile_transform(R,r,name,lamda_A,z, alpha_A, t)
+function  foil_temp=profile_transform(R,r,name,lamda_A,z, alpha_A, t)
 %%  Profil generienren, verdrehen und verschieben für die Blattauslegung%%
 %% R       %% Blattgesamtlänge         [m]
 %% r %%Position auf dem Blatt    [m]
@@ -9,6 +9,7 @@ function profile=profile_transform(R,r,name,lamda_A,z, alpha_A, t)
 %% lamda_A Schnellaufzahl
 %% name;
 
+addpath('./xfoil/');
 %%Airfoil daten berehcnen mit xFoil Schnittstelle
 [coeffs,foil]=xfoil(name,alpha_A,0,0.3); 
 c_L=coeffs.CL;       %%Auftriebsbeiwert aus der xfoil berechnung
@@ -29,4 +30,14 @@ profile=deep_bld*R*(profile-[t;0]);
 %%die z Koordinate des profiles hinzufügen
 len=length(profile);
 profile=[profile; ones(1,len)*r];
+
+foil_temp.x=profile(1,:);
+foil_temp.y=profile(2,:);
+foil_temp.z=profile(3,:);
+foil_temp.name=coeffs.name;
+foil_temp.Cl=coeffs.CL;
+foil_temp.Cd=coeffs.CD;
+foil_temp.Cdp=coeffs.CDp;
+foil_temp.Cm=coeffs.Cm;
+foil_temp.r=r;
 end

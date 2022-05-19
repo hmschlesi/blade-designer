@@ -1,0 +1,5 @@
+function prof=bld_sort(profiles)
+for k=1:length(prof)
+    pos(k) = profiles(k).r(1);
+end
+[idx,pos]=sort(pos)

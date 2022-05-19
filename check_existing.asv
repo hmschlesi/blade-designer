@@ -1,0 +1,6 @@
+function existing=check_existing(profiles,R)
+%% Prüft ein gegebene
+for k=1:length(profiles)
+    radii(k) = profiles(k).r(1);
+end
+existing=not(isempty(intersect(radii,R)))
