@@ -46,12 +46,12 @@
    Z       Zoom    | (available in all menus)
    U       Unzoom  | 
 
- XFOIL   c>   Max thickness =     0.120029  at x =   0.297
- Max camber    =     0.004771  at x =   0.504
+ XFOIL   c>   Max thickness =     0.150043  at x =   0.300
+ Max camber    =     0.020000  at x =   0.598
 
  Buffer airfoil set using 331 points
 
- Blunt trailing edge.  Gap =  0.00252
+ Blunt trailing edge.  Gap =  0.00315
 
  Paneling parameters used...
    Number of panel nodes       160
@@ -66,12 +66,13 @@
  XFOIL   c>  
 .OPERi   c>  
 .OPERi   c>  
- Sonic Cp =     -6.95      Sonic Q/Qinf =     3.070
-
-
 .OPERi   c>  
+ M  =    0.0000
+ Re =      1000
+
+.OPERv   c>  
  Polar  1 newly created for accumulation
- Airfoil archived with polar: NACA 2012                                       
+ Airfoil archived with polar: NACA 2615                                       
 
 Enter  polar save filename  OR  <return> for no file   s>  
  Polar save file will NOT be written
@@ -81,37 +82,182 @@ Enter  polar dump filename  OR  <return> for no file   s>
 
  Polar accumulation enabled
 
-.OPERia   c>   Calculating unit vorticity distributions ...
- plradd ia,ip,cpol            1           0  4.17501573E-03
+.OPERva   c>   Calculating unit vorticity distributions ...
+ Calculating wake trajectory ...
+ Calculating source influence matrix ...
+
+ Solving BL system ...
+
+ Initializing BL ...
+    side            1  ...
+ MRCHUE: Inverse mode at  62     Hk =   3.800
+ MRCHUE: Inverse mode at  63     Hk =   3.830
+ MRCHUE: Inverse mode at  64     Hk =   3.859
+ MRCHUE: Inverse mode at  65     Hk =   3.887
+ MRCHUE: Inverse mode at  66     Hk =   3.915
+ MRCHUE: Inverse mode at  67     Hk =   3.943
+ MRCHUE: Inverse mode at  68     Hk =   3.970
+ MRCHUE: Inverse mode at  69     Hk =   3.997
+ MRCHUE: Inverse mode at  70     Hk =   4.023
+ MRCHUE: Inverse mode at  71     Hk =   4.049
+ MRCHUE: Inverse mode at  72     Hk =   4.074
+ MRCHUE: Convergence failed at  73  side 1    Res =  0.5945E+01
+ MRCHUE: Inverse mode at  74     Hk =   4.099
+ MRCHUE: Inverse mode at  75     Hk =   4.123
+ MRCHUE: Convergence failed at  76  side 1    Res =  0.5353E+01
+ MRCHUE: Inverse mode at  77     Hk =   4.145
+ MRCHUE: Convergence failed at  78  side 1    Res =  0.4537E+01
+ MRCHUE: Inverse mode at  79     Hk =   4.166
+ MRCHUE: Convergence failed at  80  side 1    Res =  0.5710E+01
+ MRCHUE: Inverse mode at  81     Hk =   4.182
+ MRCHUE: Convergence failed at  82  side 1    Res =  0.1609E+02
+ MRCHUE: Inverse mode at  83     Hk =   4.191
+    side            2  ...
+ MRCHUE: Inverse mode at  48     Hk =   3.800
+ MRCHUE: Inverse mode at  49     Hk =   3.836
+ MRCHUE: Inverse mode at  50     Hk =   3.871
+ MRCHUE: Inverse mode at  51     Hk =   3.905
+ MRCHUE: Inverse mode at  52     Hk =   3.939
+ MRCHUE: Inverse mode at  53     Hk =   3.971
+ MRCHUE: Inverse mode at  54     Hk =   4.003
+ MRCHUE: Inverse mode at  55     Hk =   4.035
+ MRCHUE: Inverse mode at  56     Hk =   4.065
+ MRCHUE: Inverse mode at  57     Hk =   4.095
+ MRCHUE: Inverse mode at  58     Hk =   4.125
+ MRCHUE: Inverse mode at  59     Hk =   4.154
+ MRCHUE: Inverse mode at  60     Hk =   4.182
+ MRCHUE: Inverse mode at  61     Hk =   4.210
+ MRCHUE: Inverse mode at  62     Hk =   4.238
+ MRCHUE: Inverse mode at  63     Hk =   4.265
+ MRCHUE: Inverse mode at  64     Hk =   4.291
+ MRCHUE: Inverse mode at  65     Hk =   4.317
+ MRCHUE: Inverse mode at  66     Hk =   4.343
+ MRCHUE: Inverse mode at  67     Hk =   4.368
+ MRCHUE: Convergence failed at  68  side 2    Res =  0.3120E+01
+ MRCHUE: Inverse mode at  69     Hk =   4.392
+ MRCHUE: Inverse mode at  70     Hk =   4.416
+ MRCHUE: Inverse mode at  71     Hk =   4.440
+ MRCHUE: Inverse mode at  72     Hk =   4.463
+ MRCHUE: Convergence failed at  73  side 2    Res =  0.2506E+01
+ MRCHUE: Inverse mode at  74     Hk =   4.483
+ MRCHUE: Inverse mode at  75     Hk =   4.503
+ MRCHUE: Inverse mode at  76     Hk =   4.521
+ MRCHUE: Convergence failed at  77  side 2    Res =  0.3654E+01
+ MRCHUE: Inverse mode at  78     Hk =   4.534
+ MRCHUE: Inverse mode at  79     Hk =   4.542
+ MRCHUE: Inverse mode at  81     Hk =   4.234
+ MRCHUE: Inverse mode at  82     Hk =   4.091
+ MRCHUE: Inverse mode at  83     Hk =   3.948
+ MRCHUE: Inverse mode at  84     Hk =   3.806
+ MRCHUE: Inverse mode at  85     Hk =   3.665
+ MRCHUE: Inverse mode at  86     Hk =   3.527
+ MRCHUE: Inverse mode at  87     Hk =   3.391
+ MRCHUE: Inverse mode at  88     Hk =   3.259
+ MRCHUE: Inverse mode at  89     Hk =   3.131
+ MRCHUE: Inverse mode at  90     Hk =   3.007
+ MRCHUE: Convergence failed at  91  side 2    Res =  0.7107E-01
+
+ MRCHDU: Convergence failed at  76  side 1    Res =  0.1297E+01
+ MRCHDU: Convergence failed at  77  side 1    Res =  0.1339E+01
+ MRCHDU: Convergence failed at  78  side 1    Res =  0.4215E+01
+ MRCHDU: Convergence failed at  79  side 1    Res =  0.4160E+01
+ MRCHDU: Convergence failed at  80  side 1    Res =  0.1093E+02
+ MRCHDU: Convergence failed at  81  side 1    Res =  0.1020E+02
+ MRCHDU: Convergence failed at  82  side 1    Res =  0.7134E+01
+ MRCHDU: Convergence failed at  83  side 1    Res =  0.2035E+02
+ MRCHDU: Convergence failed at  77  side 2    Res =  0.2539E+01
+ MRCHDU: Convergence failed at  78  side 2    Res =  0.2550E+01
+ MRCHDU: Convergence failed at  79  side 2    Res =  0.1333E+02
+ MRCHDU: Convergence failed at  91  side 2    Res =  0.7131E-01
+ Side 1 forced transition at x/c =  1.0000   83
+ Side 2 forced transition at x/c =  1.0000   79
+ idif Ue xi dudx           1  0.14644915      2.60770321E-03   56.160206    
+ Uenew xinew           2  2.79173926E-02  4.97102737E-04
+
+   1   rms: 0.6182E+00   max: 0.4666E+01   D at   91  2   RLX: 0.321
+       a =  0.000      CL =  0.1957
+      Cm = -0.0650     CD =  0.04832   =>   CDf =  0.07106    CDp = -0.02274
+
+ Side 1 forced transition at x/c =  1.0000   82
+ Side 2 forced transition at x/c =  1.0000   80
+
+   2   rms: 0.4653E+00   max: 0.5973E+01   D at  102  2   RLX: 0.251
+       a =  0.000      CL =  0.1318
+      Cm = -0.0503     CD =  0.06208   =>   CDf =  0.07676    CDp = -0.01469
+
+ Side 1 forced transition at x/c =  1.0000   82
+ Side 2 forced transition at x/c =  1.0000   80
+ idif Ue xi dudx           1  0.11827467      2.23767757E-03   52.855995    
+ Uenew xinew           2  7.31537445E-03  1.38401985E-04
+
+   3   rms: 0.3041E+00   max: 0.3705E+01   D at  102  2   RLX: 0.405
+       a =  0.000      CL =  0.0610
+      Cm = -0.0353     CD =  0.07897   =>   CDf =  0.07774    CDp =  0.00123
+
+ Side 1 forced transition at x/c =  1.0000   81
+ Side 2 forced transition at x/c =  1.0000   81
+
+   4   rms: 0.1175E+00   max: 0.6712E+00   D at  102  2
+       a =  0.000      CL = -0.0401
+      Cm = -0.0141     CD =  0.12625   =>   CDf =  0.07777    CDp =  0.04848
+
+ Side 1 forced transition at x/c =  1.0000   81
+ Side 2 forced transition at x/c =  1.0000   81
+
+   5   rms: 0.3073E-01   max: -.4241E+00   D at  103  2
+       a =  0.000      CL = -0.0408
+      Cm = -0.0139     CD =  0.12244   =>   CDf =  0.07992    CDp =  0.04251
+
+ Side 1 forced transition at x/c =  1.0000   81
+ Side 2 forced transition at x/c =  1.0000   81
+
+   6   rms: 0.1099E-01   max: -.8915E-01   D at    3  2
+       a =  0.000      CL = -0.0420
+      Cm = -0.0136     CD =  0.12712   =>   CDf =  0.08008    CDp =  0.04705
+
+ Side 1 forced transition at x/c =  1.0000   81
+ Side 2 forced transition at x/c =  1.0000   81
+
+   7   rms: 0.6573E-03   max: -.6498E-02   D at    3  2
+       a =  0.000      CL = -0.0419
+      Cm = -0.0136     CD =  0.12714   =>   CDf =  0.07939    CDp =  0.04775
+
+ Side 1 forced transition at x/c =  1.0000   81
+ Side 2 forced transition at x/c =  1.0000   81
+
+   8   rms: 0.5874E-05   max: 0.5626E-04   D at    3  1
+       a =  0.000      CL = -0.0419
+      Cm = -0.0136     CD =  0.12714   =>   CDf =  0.07939    CDp =  0.04775
+ plradd ia,ip,cpol            1          80  8.45166668E-02
 
  Point added to stored polar  1
  Save file unspecified or not available
  Dump file unspecified or not available
 
-.OPERia   c>  
-.OPERia   c>  
-.OPERia   c>  
+.OPERva   c>  
+.OPERva   c>  
+.OPERva   c>  
         airfoil                    Re           Mach       Ncrit  XtripT  XtripB     file
        ------------------------  ------------  ----------  -----  ------  ------    -------------------
- >  1  NACA 2012                 0.000e*       0.300        9.00   1.000   1.000    
+ >  1  NACA 2615                 1.000e3       0.000        9.00   1.000   1.000    
 
 Enter polar output filename   s>  
-.OPERia   c>  
+.OPERva   c>  
  ==============================================================
  Polar  1
   
        XFOIL         Version 6.99
   
- Calculated polar for: NACA 2012                                       
+ Calculated polar for: NACA 2615                                       
   
  1 1 Reynolds number fixed          Mach number fixed         
   
  xtrf =   1.000 (top)        1.000 (bottom)  
- Mach =   0.300     Re =     0.000 e 6     Ncrit =   9.000
+ Mach =   0.000     Re =     0.001 e 6     Ncrit =   9.000
   
    alpha    CL        CD       CDp       CM     Top_Xtr  Bot_Xtr
   ------ -------- --------- --------- -------- -------- --------
-   6.000   1.0003   0.00000  -0.00901  -0.0264   0.0000   0.0000
+   0.000  -0.0419   0.12714   0.04775  -0.0136   1.0000   1.0000
 
-.OPERia   c>  
+.OPERva   c>  
  XFOIL   c>  

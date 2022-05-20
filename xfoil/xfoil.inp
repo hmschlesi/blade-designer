@@ -1,15 +1,16 @@
-naca 2012
+naca 2615
 
 
 oper
-re 0
-mach 0.3
+re 1000
+mach 0
+visc
 pacc
 
 
-alfa 6
-dump xfoil_a06.000_dump.dat
-cpwr xfoil_a06.000_cpwr.dat
+alfa 0
+dump xfoil_a00.000_dump.dat
+cpwr xfoil_a00.000_cpwr.dat
 pwrt
 xfoil_pwrt.dat
 plis
