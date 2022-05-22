@@ -6,6 +6,7 @@ profile.z=ones(1,n)*r;
 profile.Cd=1.2;
 profile.Cl=0;
 profile.camber=d;
+profile.alpha_bau=0;
 profile.r=r;
 profile.Cdp=0;
 profile.Cm=0;
