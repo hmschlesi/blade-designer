@@ -4,11 +4,13 @@ a=0;
 a_head=0;
 d_a=1;
 d_ahead=1;
+tol=1e-5;
 
-while d_a > 0.001 & d_ahead >0.001
+while d_a > tol & d_ahead >tol
     tan_phi=(1-a)/((1+a_head)*lambda);
     phi=atan(tan_phi);
-    alpha=phi-alpha_bau
+    alpha=phi-alpha_bau;
+    rad2deg(alpha)
     [pol,coords]=xfoil(name,rad2deg(alpha),1e6,0,'oper iter 300');
     pol.CL
     C_n=pol.CL*cos(phi)+pol.CD*sin(phi);

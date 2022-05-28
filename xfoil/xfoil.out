@@ -73,8 +73,8 @@
   C olor PostScript output?     F
 
       Option, Value   (or <Return>)    c>  
- XFOIL   c>   Max thickness =     0.120033  at x =   0.299
- Max camber    =     0.002386  at x =   0.503
+ XFOIL   c>   Max thickness =     0.120035  at x =   0.300
+ Max camber    =     0.010000  at x =   0.795
 
  Buffer airfoil set using 331 points
 
@@ -89,22 +89,16 @@
    Bottom side refined area x/c limits  1.000 1.000
 
  XFOIL   c>  
-.OPERi   c>   Current iteration limit:          10
+ XFOIL   c>  
+ XFOIL   c>  
+.OPERi   c>  
+.OPERi   c>  
+ Sonic Cp =     -6.95      Sonic Q/Qinf =     3.070
 
-Enter new iteration limit   i>  
-.OPERi   c>  
- XFOIL   c>  
- XFOIL   c>  
- XFOIL   c>  
-.OPERi   c>  
-.OPERi   c>  
-.OPERi   c>  
- M  =    0.0000
- Re =   1000000
 
-.OPERv   c>  
+.OPERi   c>  
  Polar  1 newly created for accumulation
- Airfoil archived with polar: NACA 1012                                       
+ Airfoil archived with polar: NACA 1812                                       
 
 Enter  polar save filename  OR  <return> for no file   s>  
  Polar save file will NOT be written
@@ -114,104 +108,37 @@ Enter  polar dump filename  OR  <return> for no file   s>
 
  Polar accumulation enabled
 
-.OPERva   c>   Calculating unit vorticity distributions ...
- Calculating wake trajectory ...
- Calculating source influence matrix ...
-
- Solving BL system ...
-
- Initializing BL ...
-    side            1  ...
- MRCHUE: Inverse mode at  24     Hk =   4.485
- MRCHUE: Inverse mode at  25     Hk =   5.770
- MRCHUE: Inverse mode at  26     Hk =   7.073
- MRCHUE: Inverse mode at  27     Hk =   8.428
- MRCHUE: Inverse mode at  28     Hk =   9.356
- MRCHUE: Inverse mode at  29     Hk =   2.500
- MRCHUE: Inverse mode at  92     Hk =   2.500
- MRCHUE: Inverse mode at  93     Hk =   2.500
- MRCHUE: Inverse mode at  94     Hk =   2.500
-    side            2  ...
- MRCHUE: Inverse mode at  63     Hk =   3.862
- MRCHUE: Inverse mode at  64     Hk =   4.568
- MRCHUE: Inverse mode at  65     Hk =   5.215
- MRCHUE: Inverse mode at  66     Hk =   5.784
- MRCHUE: Inverse mode at  67     Hk =   6.268
- MRCHUE: Inverse mode at  68     Hk =   6.544
-
- Side 1  free  transition at x/c =  0.0243   28
- Side 2 forced transition at x/c =  1.0000   68
-
-   1   rms: 0.2601E+00   max: 0.1172E+01   D at   72  2   RLX: 0.486
-       a =  8.347      CL =  1.0580
-      Cm = -0.0122     CD =  0.00991   =>   CDf =  0.00604    CDp =  0.00386
-
- Side 1  free  transition at x/c =  0.0270   29
- Side 2 forced transition at x/c =  1.0000   68
- idif Ue xi dudx           1  0.10116760      4.57513332E-03   22.112492    
- Uenew xinew           2  7.49682495E-03  3.39031219E-04
-
-   2   rms: 0.1127E+00   max: 0.8161E+00   D at   29  1
-       a =  8.347      CL =  1.0131
-      Cm = -0.0064     CD =  0.01281   =>   CDf =  0.00632    CDp =  0.00649
-
- Side 1  free  transition at x/c =  0.0319   29
- Side 2 forced transition at x/c =  1.0000   69
-
-   3   rms: 0.1746E-01   max: 0.2634E+00   C at   69  2
-       a =  8.347      CL =  1.0064
-      Cm = -0.0051     CD =  0.01335   =>   CDf =  0.00603    CDp =  0.00732
-
- Side 1  free  transition at x/c =  0.0320   29
- Side 2 forced transition at x/c =  1.0000   69
-
-   4   rms: 0.2871E-02   max: 0.5385E-01   C at   69  2
-       a =  8.347      CL =  1.0074
-      Cm = -0.0053     CD =  0.01336   =>   CDf =  0.00600    CDp =  0.00736
-
- Side 1  free  transition at x/c =  0.0319   29
- Side 2 forced transition at x/c =  1.0000   69
-
-   5   rms: 0.1152E-03   max: 0.2140E-02   C at   69  2
-       a =  8.347      CL =  1.0074
-      Cm = -0.0054     CD =  0.01336   =>   CDf =  0.00599    CDp =  0.00736
-
- Side 1  free  transition at x/c =  0.0319   29
- Side 2 forced transition at x/c =  1.0000   69
-
-   6   rms: 0.5318E-06   max: -.3566E-05   T at   29  1
-       a =  8.347      CL =  1.0074
-      Cm = -0.0054     CD =  0.01336   =>   CDf =  0.00599    CDp =  0.00736
- plradd ia,ip,cpol            1          92  2.61363015E-03
+.OPERia   c>   Calculating unit vorticity distributions ...
+ plradd ia,ip,cpol            1           0  9.78958094E-04
 
  Point added to stored polar  1
  Save file unspecified or not available
  Dump file unspecified or not available
 
-.OPERva   c>  
-.OPERva   c>  
-.OPERva   c>  
+.OPERia   c>  
+.OPERia   c>  
+.OPERia   c>  
         airfoil                    Re           Mach       Ncrit  XtripT  XtripB     file
        ------------------------  ------------  ----------  -----  ------  ------    -------------------
- >  1  NACA 1012                 1.000e6       0.000        9.00   1.000   1.000    
+ >  1  NACA 1812                 0.000e*       0.300        9.00   1.000   1.000    
 
 Enter polar output filename   s>  
-.OPERva   c>  
+.OPERia   c>  
  ==============================================================
  Polar  1
   
        XFOIL         Version 6.99
   
- Calculated polar for: NACA 1012                                       
+ Calculated polar for: NACA 1812                                       
   
  1 1 Reynolds number fixed          Mach number fixed         
   
  xtrf =   1.000 (top)        1.000 (bottom)  
- Mach =   0.000     Re =     1.000 e 6     Ncrit =   9.000
+ Mach =   0.300     Re =     0.000 e 6     Ncrit =   9.000
   
    alpha    CL        CD       CDp       CM     Top_Xtr  Bot_Xtr
   ------ -------- --------- --------- -------- -------- --------
-   8.347   1.0074   0.01336   0.00736  -0.0054   0.0319   1.0000
+  16.000   2.4673   0.00000  -0.15964  -0.0518   0.0000   0.0000
 
-.OPERva   c>  
+.OPERia   c>  
  XFOIL   c>  

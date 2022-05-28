@@ -18,7 +18,7 @@ if regexp(name,'NACA([0-9]{4})$') == 1
     alpha_A=naca_AoA_max(name)
     
     %%Airfoil daten berehcnen mit xFoil Schnittstelle
-    [coeffs,foil]=xfoil(name,alpha_A,0,0.3); 
+    [coeffs,foil]=xfoil(name,alpha_A,1e4,0); 
 
     %%Profil zum weiterrechnen in MAtrixform
     profile=horzcat(foil.x, foil.y)';

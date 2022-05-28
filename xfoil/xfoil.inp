@@ -1,23 +1,18 @@
 PLOP
 G
 
-naca  1012
-oper
-iter
-300
-
+naca 1812
 
 
 oper
-re 1e+06
-mach 0
-visc
+re 0
+mach 0.3
 pacc
 
 
-alfa 8.34724
-dump xfoil_a08.347_dump.dat
-cpwr xfoil_a08.347_cpwr.dat
+alfa 16
+dump xfoil_a16.000_dump.dat
+cpwr xfoil_a16.000_cpwr.dat
 pwrt
 xfoil_pwrt.dat
 plis
