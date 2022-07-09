@@ -1,4 +1,4 @@
-function foil_save(pol,coords)
+function foil_save(pol,coords,fname)
 
 %% AoA für max. Gleitzahl ermitteln
 epsilon=pol.CL./pol.CD;
@@ -12,7 +12,7 @@ CL_lift=pol.CL(I);
 CD_lift=pol.CD(I);
 
 %%save polar data from xfoil to .dat
-name=join(['imported\',pol.name,'_pol.dat'])
+name=join(['imported\',fname,'_pol.dat'])
 fileID = fopen(name,'w');
 formatSpec = 'name: %s\nRe: %e\nNcrit: %d\nAoA_eps: %f\nCL_eps: %f\nCD_eps: %d\nAoA_lift: %f\nCL_lift: %f\nCD_lift: %d\n ';
 fprintf(fileID,formatSpec,pol.name, pol.Re, pol.Ncrit, AoA_eps, CL_eps, CD_eps,AoA_lift, CL_lift, CD_lift);
@@ -23,7 +23,7 @@ fprintf(fileID,formatSpec, [pol.alpha, pol.CL, pol.CD, pol.Cm]);
 fclose(fileID);
 
 %%save coords to .dat
-name=join(['imported\',pol.name,'_coords.dat'])
+name=join(['imported\',fname,'_coords.dat'])
 fileID = fopen(name,'w');
 formatSpec = 'name: %s\n';
 fprintf(fileID,formatSpec,pol.name);

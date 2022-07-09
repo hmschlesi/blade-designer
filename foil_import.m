@@ -8,7 +8,7 @@ l=length(listing);
 for i=3:l
     file_folder=listing(i).folder;
     file_name=listing(i).name
-    name=erase(file_name, [".txt",".dat"]);
+    name=erase(file_name, [".txt",".dat"])
     file_path=join(['foils_4_import\',file_name]);
 
 %      sizeA=[2 Inf];
@@ -48,7 +48,7 @@ i
     AoA_lift(i-2,3)=pol.CD(I);
     
     
-    foil_save(pol,A);
+    foil_save(pol,A,name);
 end
 for i=3:l
     listing_new(i-2).name=erase(listing(i).name, [".txt",".dat"]);

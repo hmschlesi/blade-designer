@@ -1,5 +1,5 @@
 
-function  foil_temp=profile_transform(R,r,name,lamda_A,z, t)
+function  foil_temp=profile_transform(R,r,name,lamda_A,z, t,foil_db)
 %%  Profil generienren, verdrehen und verschieben für die Blattauslegung%%
 %%Bei bekannten Profilen wird eine Alpha_A mit max C_l gewählt
 %% R       %% Blattgesamtlänge         [m]
@@ -10,50 +10,40 @@ function  foil_temp=profile_transform(R,r,name,lamda_A,z, t)
 %% lamda_A Schnellaufzahl
 %% name;
 
-addpath('./xfoil/');
 
-if regexp(name,'NACA([0-9]{4})$') == 1
-    %%prüft ob ein 4-digit NACA Profil eingegeben wurde z.B. 'NACA0012'
-    
-    alpha_A=naca_AoA_max(name)
-    
-    %%Airfoil daten berehcnen mit xFoil Schnittstelle
-    [coeffs,foil]=xfoil(name,alpha_A,1e4,0,'oper iter 50'); 
+Index =find(strcmp(name,foil_db.foil_name))
 
-    %%Profil zum weiterrechnen in MAtrixform
-    profile=horzcat(foil.x, foil.y)';
-
+    profile=readmatrix(join(['imported\',name,'_coords.dat']))'
     %%Verdrehung berechnen
-    theta_bld=bld_twist(R,r,lamda_A,deg2rad(alpha_A));
+      theta_bld=bld_twist(R,r,lamda_A,foil_db.AoA_eps(Index))
     %%Blatttiefe berechnen
-    deep_bld=Bld_deep(R,r,lamda_A,coeffs.CL, z)
+      deep_bld=Bld_deep(R,r,lamda_A,foil_db.CL_eps(Index), z)
 
     %%Rotationsmatrix für die Verdrehnung erstellen
-    R = [cos(theta_bld) -sin(theta_bld); sin(theta_bld) cos(theta_bld)];
+      rot_angle=theta_bld+deg2rad(foil_db.AoA_eps(Index))
+      R = [cos(rot_angle) -sin(rot_angle); sin(rot_angle) cos(rot_angle)];
     %%Profil verschieben und verdrehen
-    profile=deep_bld*R*(profile-[t;0])
+      profile=deep_bld*R*(profile-[t;0]);
 
     %%die z Koordinate des profiles hinzufügen
-    len=length(profile);
-    profile=[profile; ones(1,len)*r];
+     len=length(profile);
+     profile=[profile; ones(1,len)*r]
 
     foil_temp.x=profile(1,:);
     foil_temp.y=profile(2,:);
     foil_temp.z=profile(3,:);
-    foil_temp.name=coeffs.name;
-    foil_temp.Cl=coeffs.CL;
-    foil_temp.Cd=coeffs.CD;
-    foil_temp.Cdp=coeffs.CDp;
-    foil_temp.Cm=coeffs.Cm;
+    foil_temp.name=name
+    foil_temp.Cl=foil_db.CL_eps(Index);
+    foil_temp.Cd=foil_db.CD_eps(Index);
     foil_temp.r=r;
     foil_temp.camber=deep_bld;
     foil_temp.alpha_bau=theta_bld;
-elseif regexp(name,'Cir_([0-9]+([.][0-9]*))') == 1
-    d=str2double(regexp(name,'([0-9]+([.][0-9]*))','match'))
-    profile=prof_circle(d,r,160);
-    profile.name=name;
-    foil_temp=profile;
-else
-    disp('Profile nicht erkannt. Anderes Profil eingeben');
-end
-end
+% elseif regexp(name,'Cir_([0-9]+([.][0-9]*))') == 1
+%     d=str2double(regexp(name,'([0-9]+([.][0-9]*))','match'))
+%     profile=prof_circle(d,r,160);
+%     profile.name=name;
+%     foil_temp=profile;
+% else
+%     disp('Profile nicht erkannt. Anderes Profil eingeben');
+% end
+% end

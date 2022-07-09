@@ -1,4 +1,4 @@
-function bladesafe(profile)
+function blade_save(profile)
 l=length(profile)
 
 for i=1:l
