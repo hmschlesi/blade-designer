@@ -1,8 +1,8 @@
 PLOP
 G
 
-load du84132v.dat
-du84132v
+load naca64a210.dat
+naca64a210
 oper
 iter
 160
@@ -10,42 +10,12 @@ iter
 
 
 oper
-re 1e+06
+re 100000
 mach 0
 visc
 pacc
 
 
-alfa -10
-dump xfoil_a-10.000_dump.dat
-cpwr xfoil_a-10.000_cpwr.dat
-alfa -9
-dump xfoil_a-9.000_dump.dat
-cpwr xfoil_a-9.000_cpwr.dat
-alfa -8
-dump xfoil_a-8.000_dump.dat
-cpwr xfoil_a-8.000_cpwr.dat
-alfa -7
-dump xfoil_a-7.000_dump.dat
-cpwr xfoil_a-7.000_cpwr.dat
-alfa -6
-dump xfoil_a-6.000_dump.dat
-cpwr xfoil_a-6.000_cpwr.dat
-alfa -5
-dump xfoil_a-5.000_dump.dat
-cpwr xfoil_a-5.000_cpwr.dat
-alfa -4
-dump xfoil_a-4.000_dump.dat
-cpwr xfoil_a-4.000_cpwr.dat
-alfa -3
-dump xfoil_a-3.000_dump.dat
-cpwr xfoil_a-3.000_cpwr.dat
-alfa -2
-dump xfoil_a-2.000_dump.dat
-cpwr xfoil_a-2.000_cpwr.dat
-alfa -1
-dump xfoil_a-1.000_dump.dat
-cpwr xfoil_a-1.000_cpwr.dat
 alfa 0
 dump xfoil_a00.000_dump.dat
 cpwr xfoil_a00.000_cpwr.dat
