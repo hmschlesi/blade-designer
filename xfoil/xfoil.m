@@ -110,9 +110,9 @@ end;
 % Write xfoil command file
 fid = fopen([wd filesep fname '.inp'],'w');
 
-%Suppres Xfoil Plot Display
-fprintf(fid,'PLOP\n');
-fprintf(fid,'G\n\n');
+% %Suppres Xfoil Plot Display
+ fprintf(fid,'PLOP\n');
+ fprintf(fid,'G\n\n');
 
 if (fid<=0),
   error([mfilename ':io'],'Unable to create xfoil.inp file');
