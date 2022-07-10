@@ -1,3 +1,0 @@
-name: test_prof
-Re: 1.000000e+06
-Ncrit: 9

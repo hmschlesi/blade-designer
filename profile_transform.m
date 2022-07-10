@@ -28,6 +28,11 @@ Index =find(strcmp(name,foil_db.foil_name))
     %%die z Koordinate des profiles hinzufügen
      len=length(profile);
      profile=[profile; ones(1,len)*r]
+     
+
+     %%two times the inverse to switch between different sizes
+     profile=foil_project2cylinder(profile',r)'
+     
 
     foil_temp.x=profile(1,:);
     foil_temp.y=profile(2,:);
@@ -38,12 +43,4 @@ Index =find(strcmp(name,foil_db.foil_name))
     foil_temp.r=r;
     foil_temp.camber=deep_bld;
     foil_temp.alpha_bau=theta_bld;
-% elseif regexp(name,'Cir_([0-9]+([.][0-9]*))') == 1
-%     d=str2double(regexp(name,'([0-9]+([.][0-9]*))','match'))
-%     profile=prof_circle(d,r,160);
-%     profile.name=name;
-%     foil_temp=profile;
-% else
-%     disp('Profile nicht erkannt. Anderes Profil eingeben');
-% end
 % end

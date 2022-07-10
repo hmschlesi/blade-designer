@@ -1,4 +1,4 @@
-function BEM(name,lambda,alpha_bau,z,chord,r,R)
+function BEM(name,lambda,alpha_bau,z,chord,r,R,CL,CD)
 
 a=0;
 a_head=0;
@@ -28,8 +28,10 @@ while d_a > tol || d_ahead >tol && it<itmax
     F = 2/pi*acos(exp(-f));
     
     alpha=phi-alpha_bau;
+    %%wird mit ausgegeben.. Warum?
     rad2deg(alpha)
-    [pol,coords]=xfoil(name,rad2deg(alpha),1e6,0,'oper iter 300');
+    filename=join([name,'.dat'])
+    [pol,coords]=xfoil(filename,rad2deg(alpha),1e6,0,'oper iter 300');
     pol.CL
     C_n=pol.CL*cos(phi)+pol.CD*sin(phi);
     C_t=pol.CL*sin(phi)-pol.CD*cos(phi);
