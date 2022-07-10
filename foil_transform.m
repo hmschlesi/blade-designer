@@ -1,5 +1,5 @@
 
-function  foil_temp=profile_transform(R,r,name,lamda_A,z, t,foil_db)
+function  foil_temp=foil_transform(R,r,name,lamda_A,z, t,foil_db)
 %%  Profil generienren, verdrehen und verschieben für die Blattauslegung%%
 %%Bei bekannten Profilen wird eine Alpha_A mit max C_l gewählt
 %% R       %% Blattgesamtlänge         [m]
