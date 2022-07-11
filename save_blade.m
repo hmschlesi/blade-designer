@@ -12,7 +12,9 @@ end
 
 for i=1:l
    A=[profile(i).x; profile(i).y; profile(i).z]'
-   A(end+1,:)=A(1,:)
+   if A(end,:) ~= A(1,:)
+        A(end+1,:)=A(1,:)
+   end
   %% filename = strcat(folder,'\',num2str(i),'_',profile(i).name,'_at_',num2str(profile(i).r),'m.txt')
   filename = strcat(folder,'\',num2str(i),'.txt')
 
