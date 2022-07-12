@@ -10,6 +10,7 @@ CD_eps=pol.CD(I);
 AoA_lift=pol.alpha(I);
 CL_lift=pol.CL(I);
 CD_lift=pol.CD(I);
+A=[pol.alpha, pol.CL, pol.CD,pol.Cm];
 
 %%save polar data from xfoil to .dat
 name=join(['imported\',fname,'_pol.dat'])
@@ -19,7 +20,9 @@ fprintf(fileID,formatSpec,pol.name, pol.Re, pol.Ncrit, AoA_eps, CL_eps, CD_eps,A
 formatSpec = '%s\t%s\t%s\t%s\n';
 fprintf(fileID,formatSpec,'alpha', 'CL','CD','Cm');
 formatSpec = '%f\t%f\t%f\t%f\n';
-fprintf(fileID,formatSpec, [pol.alpha, pol.CL, pol.CD, pol.Cm]);
+for ii = 1:size(A,1)
+    fprintf(fileID,formatSpec,[A(ii,1), A(ii,2),A(ii,3),A(ii,4)]);
+end
 fclose(fileID);
 
 %%save coords to .dat
