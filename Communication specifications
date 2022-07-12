@@ -1,0 +1,37 @@
+################### Matlab to SWX ######################
+Profiles:
+  - Directory: .../Tool/profiles/
+  - own .txt file for every profile
+  - named: 1.txt, 2.txt, ...
+  - .txt contain rows of XYZ coordinates
+  - delimiter: tab
+  - decimal sign: "." (POINT)
+  - number of digits after decimal point: 6
+  - profiles must be closed (last XYZ = first XYZ)
+  - unit: millimeters
+  
+Parameters:
+  - Directory: .../Tool/
+  - named: param.txt
+  - contains parameters for 3d-model
+  - each row 1 parameter (from top to bottom):
+      - Hub diameter
+      - Hub length
+      - number of blades
+      - diameter of arms of hub (diameter of cylinder of blade root)
+      - length of arms of hub
+      - thickness of blade flange
+      - hub height above ground (height of tower)
+   - decimal sign: "," (COMMA)
+   - unit: meters
+
+################### SWX to Interface ###################
+Pictures:
+  - 
+  -
+  -
+
+################### Interface to BEM ###################
+
+################### BEM to Interface ###################
+
