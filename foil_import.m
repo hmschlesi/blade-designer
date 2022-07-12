@@ -37,6 +37,7 @@ for i=3:l
             foil_db=[foil_db;T];
             writetable(foil_db,foil_db_path);
             disp(join(['Profil ',name,' wurde importiert']))
+            foil_save(pol,A,name);
         else
             disp('foil already imported')
         end
@@ -97,6 +98,7 @@ for i=3:l
             T.Properties.VariableNames={'foil_name','AoA_eps','CL_eps','CD_eps','AoA_lift','CL_lift','CD_lift'};
             foil_db=[foil_db;T];
             writetable(foil_db,foil_db_path);
+            foil_save(pol,A,name);
             disp(join(['Profil ',name,' wurde importiert']))
         else
             disp('foil already imported')
