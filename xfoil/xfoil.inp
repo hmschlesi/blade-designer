@@ -5,7 +5,7 @@ load naca64a210.dat
 naca64a210
 oper
 iter
-160
+300
 
 
 
