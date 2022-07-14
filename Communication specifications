@@ -1,3 +1,11 @@
+
+
+################### Profilesdatabase to Matlab ######################
+- Directory: .../foils_4_import_pol/
+-here are 2 kinds of .dat files in there: ones the coordinates and the others their polars, the names of which are same as coordinate-files + _pol
+
+
+
 ################### Matlab to SWX ######################
 Profiles:
   - Directory: .../Tool/profiles/
