@@ -13,7 +13,7 @@ function  foil_temp=foil_transform(R,r,name,lamda_A,z, t,foil_db)
 
 Index =find(strcmp(name,foil_db.foil_name))
 
-    profile=readmatrix(join(['imported\',name,'_coords.dat']))'
+    profile=readmatrix(join(['imported\',name,'_coords.dat']))';
     %%Verdrehung berechnen
       theta_bld=bld_twist(R,r,lamda_A,foil_db.AoA_eps(Index));
     %%Blatttiefe berechnen
