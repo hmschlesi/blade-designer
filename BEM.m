@@ -14,10 +14,10 @@ itmax = 100;
 
 while d_a > tol || d_ahead > tol && it<itmax %%Step 7.2
     it = it + 1;
-    if it > 1
-        a = a_n;
-        a_head = a_headn;
-    end
+%     if it > 1
+%         a = a_n;
+%         a_head = a_headn;
+%     end
     
     %% Step 2: Phi calculation (6.7)
 
@@ -26,30 +26,30 @@ while d_a > tol || d_ahead > tol && it<itmax %%Step 7.2
     
     %% Additional Step 2: Prandtl verlustfaktor F
     
-    f = z/2*(R-r)/(r*sin(phi));
+    f = z/2*(R-r)/(r*sin(phi)); %(6.34)
     if f < 0
         f = 0;
     end
-    F = 2/pi*acos(exp(-f));
+    F = 2/pi*acos(exp(-f)); %(6.33)
     
     %% Step 3: Local AoA (6.6)
 
     alpha=phi-alpha_bau;
     %%wird mit ausgegeben.. Warum?
-    rad2deg(alpha)
+    %rad2deg(alpha)
 
     %% Step 4: Cl(alpha) & Cd(alpha) from table
 
-    %filename=join([name,'.dat'])
-    %[pol,coords]=xfoil(filename,rad2deg(alpha),1e6,0,'oper iter 300');
+    filename=join([name,'.dat'])
+    [pol,coords]=xfoil(filename,rad2deg(alpha),1e6,0,'oper iter 300');
     %pol.CL
 
     %% Step 5:  Cn & Cd (6.12)(6.13)
 
-    %C_n=pol.CL*cos(phi)+pol.CD*sin(phi);
-    %C_t=pol.CL*sin(phi)-pol.CD*cos(phi);
-    C_n=CL*cos(phi)+CD*sin(phi);
-    C_t=CL*sin(phi)-CD*cos(phi);
+    C_n=pol.CL*cos(phi)+pol.CD*sin(phi);
+    C_t=pol.CL*sin(phi)-pol.CD*cos(phi);
+    %C_n=CL*cos(phi)+CD*sin(phi);
+    %C_t=CL*sin(phi)-CD*cos(phi);
     sigma=chord*z./(2*pi*r);
     
     %% Step 6.1: a mit Glauertskorrektur (6.44)(6.42)
