@@ -5,7 +5,7 @@ clc
 %% Definitions
 
 vwind = 12;
-R=10;
+R=50;
 lambda_design = 7;
 z = 3;
 
