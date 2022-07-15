@@ -10,7 +10,7 @@ dM = @(r,a,a_prime,vwind,omega,rho) 4*pi*r.^3*rho*vwind*omega*(1-a)*a_prime ;
 dT = @(r,a,vwind,rho) 4*pi*r.*rho*vwind^2*a*(1-a) ;
 
 %lambda = 1:0.25:13 ;%list of lambda values investigated
-lambda = 5:0.5:9;
+lambda = 1:0.25:13;
 omega = lambda .* vwind ./ R ; %[rad/s]
 n = 60/2/pi .* omega ; %[rpm]
 [P, M, T, CM, CT, CP]=deal(zeros(1,length(lambda)));%will be computed for each lambda value
@@ -31,13 +31,14 @@ sections_lim(length(prof)-1)=R;
 
 for i = 1:length(lambda) %lambda index
 
+    [P_loc, M_loc, T_loc, CM_loc, CT_loc, CP_loc] = deal(0);
+
     for j = 1:(length(prof)-2)%section index
 
         %BEM calculation for the section
         [a, a_prime,~,~] = BEM(prof(j+2).name,lambda(i),prof(j+2).alpha_bau,z,prof(j+2).camber,prof(j+2).r,R,prof(j+2).Cl,prof(j+2).Cd);
 
         %Local coefficients
-        [P_loc, M_loc, T_loc, CM_loc, CT_loc, CP_loc] = deal(0);
 
         M_loc(j) = integral(@(r)dM(r,a,a_prime,vwind,omega(i),rho) , sections_lim(j) , sections_lim(j)+1 ) ;
         T_loc(j) = integral(@(r)dT(r,a,vwind,rho), sections_lim(j) , sections_lim(j)+1) ;
