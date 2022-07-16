@@ -24,9 +24,7 @@ Parameters:
   - contains parameters for 3d-model
   - each row 1 parameter (from top to bottom):
       - number of blades
-      - diameter of arms of hub (diameter of cylinder of blade root)
-      - length of arms of hub
-      - hub height above ground (height of tower)
+      - rotor radius
    - decimal sign: "," (COMMA)
    - unit: meters
 
