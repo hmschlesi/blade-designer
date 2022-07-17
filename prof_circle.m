@@ -1,6 +1,7 @@
 function profile=prof_circle(d,r,n)
 phi=linspace(0,2*pi,n);
-profile.x=d./2.*cos(phi)+(0.5.*d);
+%profile.x=d./2.*cos(phi)+(0.5.*d);
+profile.x=d./2.*cos(phi)
 profile.y=d./2.*sin(phi);
 profile.z=ones(1,n)*r;
 profile.Cd=0.43;
