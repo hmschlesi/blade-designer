@@ -4,7 +4,7 @@ clc
 
 %% Definitions
 
-vwind = 12;
+vwind = 8;
 R=50;
 lambda_design = 7;
 z = 3;
@@ -54,13 +54,8 @@ prof(5).Cd=0.0135;
 %% Test characteristics
 
 [lambda,omega,n,M,P,T,CM,CP,CT] = characteristics(vwind, R, z, prof);
+figure()
 tiledlayout(3,2)
-
-nexttile
-plot(n,P)
-title ('P-n curve')
-xlabel('n [rpm]')
-ylabel('Power [W]')
 
 nexttile
 plot(lambda,CP)
@@ -70,10 +65,11 @@ ylabel('C_P')
 axis ([1 14 0 Inf])
 
 nexttile
-plot(n,M)
-title('M-n curve')
+plot(n,P)
+hold on
+title ('P-n curve')
 xlabel('n [rpm]')
-ylabel('Torque [Nm]')
+ylabel('Power [W]')
 
 nexttile
 plot(lambda,CM)
@@ -82,12 +78,11 @@ xlabel('\lambda')
 ylabel('C_M')
 axis ([1 14 0 Inf])
 
-
 nexttile
-plot(n,T)
-title('T-n curve')
+plot(n,M)
+title('M-n curve')
 xlabel('n [rpm]')
-ylabel('Drag [N]')
+ylabel('Torque [Nm]')
 
 nexttile
 plot(lambda,CT)
@@ -95,3 +90,9 @@ title('C_T-\lambda curve')
 xlabel('\lambda')
 ylabel('C_T')
 axis ([1 14 0 Inf])
+
+%nexttile
+%plot(n,T)
+%title('T-n curve')
+%xlabel('n [rpm]')
+%ylabel('Drag [N]')

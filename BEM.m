@@ -10,7 +10,7 @@ d_ahead=1;
 
 tol=1e-5;
 it = 0;
-itmax = 100;
+itmax = 200;
 
 while d_a > tol || d_ahead > tol && it<itmax %%Step 7.2
     it = it + 1;
@@ -73,5 +73,10 @@ while d_a > tol || d_ahead > tol && it<itmax %%Step 7.2
     a_head=a_headn;
     
 end
-disp('Lösung ist konvergiert')
+
+if it<itmax
+    disp('the solution is convergent')
+else
+    disp("the solution is not convergent for lambda = "+lambda+" and r = "+r)
+end
 
