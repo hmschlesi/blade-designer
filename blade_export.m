@@ -1,4 +1,4 @@
-function blade_export(profile)
+function blade_export(profile,R,z)
 folder='Tool\profiles';
 
 l=length(profile);
