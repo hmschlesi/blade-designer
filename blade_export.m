@@ -1,4 +1,4 @@
-function blade_save(profile)
+function blade_export(profile)
 folder='Tool\profiles';
 
 l=length(profile);
@@ -11,7 +11,7 @@ else
 end
 
 for i=1:l
-   A=[profile(i).x; profile(i).y; profile(i).z]'
+   A=[profile(i).x; profile(i).y; profile(i).z]';
    if A(end,:) ~= A(1,:)
         A(end+1,:)=A(1,:);
    end

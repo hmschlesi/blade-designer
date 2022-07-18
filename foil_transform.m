@@ -1,5 +1,5 @@
 
-function  foil_temp=foil_transform(R,r,name,lamda_A,z, t,foil_db)
+function  foil_temp=foil_transform(R_bld,r,name,lamda_A,z_bld, t,foil_db)
 %%  Profil generienren, verdrehen und verschieben für die Blattauslegung%%
 %%Bei bekannten Profilen wird eine Alpha_A mit max C_l gewählt
 %% R       %% Blattgesamtlänge         [m]
@@ -15,9 +15,9 @@ Index =find(strcmp(name,foil_db.foil_name))
 
     profile=readmatrix(join(['imported\',name,'_coords.dat']))';
     %%Verdrehung berechnen
-      theta_bld=bld_twist(R,r,lamda_A,foil_db.AoA_eps(Index));
+      theta_bld=bld_twist(R_bld,r,lamda_A,foil_db.AoA_eps(Index));
     %%Blatttiefe berechnen
-      deep_bld=Bld_deep(R,r,lamda_A,foil_db.CL_eps(Index), z);
+      deep_bld=Bld_deep(R_bld,r,lamda_A,foil_db.CL_eps(Index), z_bld);
 
     %%Rotationsmatrix für die Verdrehnung erstellen
       rot_angle=theta_bld+deg2rad(foil_db.AoA_eps(Index));
@@ -43,4 +43,7 @@ Index =find(strcmp(name,foil_db.foil_name))
     foil_temp.r=r;
     foil_temp.camber=deep_bld;
     foil_temp.alpha_bau=theta_bld;
+    foil_temp.R=R_bld;
+    foil_temp.z_bld=z_bld;
+    foil_temp.lambda=lamda_A;
 % end
