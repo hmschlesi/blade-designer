@@ -25,3 +25,15 @@ for i=1:l
     end
     fclose(fileID);
 end
+
+filename = 'Tool\param.txt';
+fileID = fopen(filename,'w');
+formatSpec = '%f\n';
+fprintf(fileID,formatSpec,z);
+fclose(fileID);
+
+filename = 'Tool\param2.txt';
+fileID = fopen(filename,'w');
+formatSpec = '%f\n';
+fprintf(fileID,formatSpec,R);
+fclose(fileID);
