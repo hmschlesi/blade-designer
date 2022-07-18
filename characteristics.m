@@ -8,18 +8,18 @@ Fst = rho/2*pi*R^2*vwind^2;
 
 %% Torque calculation
 
-%From (6.32)
+%From (6.32) - for ingration
 dM = @(r,a,a_prime,vwind,omega,rho,F) 4*pi*r.^3*rho*vwind*omega*(1-a)*a_prime*F ;
 
-%From (6.22)
+%From (6.22) - for sum or integration
 %dM = @(r,a,a_prime,vwind,omega,rho,z,phi,chord,C_t) 1/2*rho*z*vwind*(1-a)*omega.*r.*(1+a_prime)/sin(phi)/cos(phi)*chord*C_t.*r ;
 
 %% Thrust calculation
 
-%From (6.31)
+%From (6.31) - for integration
 dT = @(r,a,vwind,rho,F) 4*pi*r.*rho*vwind^2*a*(1-a)*F ;
 
-%From (6.21)
+%From (6.21) - for sum
 %dT = @(a,vwind,rho,z,phi,chord,C_n) 1/2*rho*z*vwind^2*(1-a)^2/sin(phi)^2*chord*C_n ;
 
 %% Loop values
