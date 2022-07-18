@@ -1,4 +1,4 @@
-function blade_save(profile)
+function blade_export(profile,R,z)
 folder='Tool\profiles';
 
 l=length(profile);
@@ -11,7 +11,7 @@ else
 end
 
 for i=1:l
-   A=[profile(i).x; profile(i).y; profile(i).z]'
+   A=[profile(i).x; profile(i).y; profile(i).z]';
    if A(end,:) ~= A(1,:)
         A(end+1,:)=A(1,:);
    end
@@ -25,3 +25,15 @@ for i=1:l
     end
     fclose(fileID);
 end
+
+filename = 'Tool\param.txt';
+fileID = fopen(filename,'w');
+formatSpec = '%f\n';
+fprintf(fileID,formatSpec,z);
+fclose(fileID);
+
+filename = 'Tool\param2.txt';
+fileID = fopen(filename,'w');
+formatSpec = '%f\n';
+fprintf(fileID,formatSpec,R);
+fclose(fileID);
