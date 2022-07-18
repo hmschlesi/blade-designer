@@ -1,4 +1,4 @@
-function [a, a_head, C_n, C_t] = BEM(name,lambda,alpha_bau,z,chord,r,R,CL,CD)
+function [a, a_head] = BEM(name,lambda,alpha_bau,z,chord,r,R,CL,CD)
 % Computes local coefficients with the BEM algorithm
 
 %% Step 1: Initialization

@@ -37,7 +37,7 @@ for i = 1:length(lambda) %lambda index
     for j = 1:(length(prof)-2)%section index
 
         %BEM calculation for the section
-        [a, a_prime,~,~] = BEM(prof(j+2).name,lambda(i),prof(j+2).alpha_bau,z,prof(j+2).camber,prof(j+2).r,R,prof(j+2).Cl,prof(j+2).Cd);
+        [a, a_prime] = BEM(prof(j+2).name,lambda(i),prof(j+2).alpha_bau,z,prof(j+2).camber,prof(j+2).r,R,prof(j+2).Cl,prof(j+2).Cd);
 
         %Local coefficients
 
